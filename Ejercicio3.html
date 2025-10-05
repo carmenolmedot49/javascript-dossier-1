@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<script>
+		
+	// Valida un DNI comprobando que tenga 8 dígitos y una letra correcta según el resto de la división entre 23, usando funciones para obtener la letra y validar el DNI.
+
+
+		// Obtener la letra del DNI
+
+		function obtenerLetra(numero) {
+    		const letras = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
+   			return letras[numero % 23]; // usamos el resto de la división para sacar la letra
+		}
+
+
+		// Obtener los números del DNI
+
+		function validarDNI(dni) {
+
+			// Se cogen los primeros 8 caracteres y se convierten a número, ya que en el prompt vienen como cadena
+			// Con slice se extrae una parte de una string, en este caso, los primeros 8 numeros del DNI
+
+			const numero = parseInt(dni.slice(0,8));
+
+
+
+			// Cogemos la letra del DNI que es el último caracter y la convertimos a mayúscula
+
+			const letra = dni.slice(-1).toUpperCase();
+
+
+
+			// Validamos que el DNI tenga 9 caracteres y que los 8 primeros sean dígitos
+
+			if (dni.length !== 9 || isNaN(numero)) {
+
+				// Si falla alguno, el DNI no es válido
+				return false; 
+			}
+
+
+
+			// Comprobar que la letra del usuario coincide con la letra correcta, que ya la calculamos en la función obtenerLetra(numero) 
+
+			return letra === obtenerLetra(numero);
+
+		}
+
+
+
+
+		// Validación final con usuario
+
+		let dni = prompt("Introduce tu DNI (recuerda que son 8 dígitos y 1 letra)");
+
+		if (validarDNI(dni)) {
+			alert("✅ El DNI es correcto, ¡gracias!")
+		} else {
+			alert ("❌ DNI inválido, no puedes continuar")
+		}
+
+
+	</script>
+	
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<script>
+
+	// Pide dos números, realiza la operación elegida (sumar, restar, multiplicar o dividir) y repite mientras el usuario no introduzca "N"
+
+		// Para continuar o salir dependiendo si el usuario elige S o N
+
+		let repetir = "S";
+
+		while (repetir.toUpperCase() === "S") {
+
+
+			// Introducir los operandos
+
+			let num1 = parseFloat(prompt("Introduce un número"));
+			let num2 = parseFloat(prompt("Introduce otro número"));
+
+
+			// Elegir operación a realizar
+		
+
+			let operacion = prompt("Elige la operación:\n1 Sumar\n2 Restar\n3 Multiplicar\n4 Dividir");
+
+
+			// Operación	
+
+			switch(operacion) {
+
+				case "1": 
+
+					let suma = num1 + num2;
+					alert("El resultado de la suma es " + suma);
+					break;
+
+				case "2": 
+
+					let resta = num1 - num2;
+					alert("El resultado de la resta es " + resta);
+					break;
+
+				case "3": 
+
+					let multi = num1 * num2;
+					alert("El resultado de la multiplicación es " + multi);
+					break;
+
+
+				case "4": 
+
+					if (num2 === 0) {
+						alert("No se puede dividir entre 0, repite la operación");
+					} else {
+						let divi = num1 / num2;
+						alert("El resultado de la división es " + divi);
+					}
+					break;
+
+
+				default: 
+					alert("No se ha reconocido la operación");
+					break;
+
+			}
+
+			// Repetir o salir
+
+			repetir = prompt("¿Quieres realizar otra operación? Pulsa la letra 'S' si quieres repetir o pulsa la letra 'N' si quieres salir");
+
+		}
+
+
+
+	</script>
+	
+</head>
+<body>
+	
+</body>
+</html>

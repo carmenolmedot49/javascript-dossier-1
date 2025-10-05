@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+
+
+	<script>
+
+	// Solicita nombre, apellido y edad, y muestra un saludo indicando si es mayor o menor de edad
+
+
+		// Sin restricciones
+
+			// Solicitud de todos los datos
+
+			var nombre = prompt("Introduce tu nombre");
+			var apellido = prompt("Introduce tu primer apellido");
+			var apellido2 = prompt("Introduce tu segundo apellido");
+			var edad = prompt("¿Cuántos años tienes?");
+
+
+			// Procesamos la edad a número
+
+			edad = parseInt(edad);
+
+
+			// Resultado
+
+			if (edad === 1) {
+				alert("Hola " + nombre + " " + apellido + " " + apellido2 + ", tienes " + edad + " año y eres un bebé 🍼")
+			} else if (edad === 0) {
+				alert("Hola " + nombre + " " + apellido + " " + apellido2 + ", " + " no tienes ni un año aún 🍼")
+			} else if (edad > 18) {
+				alert("Hola " + nombre + " " + apellido + " " + apellido2 + ", tienes " + edad + " años y eres mayor de edad 😎")
+			} else {
+				alert("Hola " + nombre + " " + apellido + " " + apellido2 + ", tienes " + edad + " años y eres menor de edad 🧐")
+			}
+
+
+
+		// Con restricciones
+
+			// Solicitud de todos los datos
+
+			// Nombre
+
+			var nombre;
+
+			do {
+				nombre = prompt("Introduce tu nombre (solo caracteres)");
+			} while (!/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(nombre));
+
+
+			// Primer apellido
+
+			var apellido;
+
+			do {
+				apellido = prompt("Introduce tu primer apellido (solo caracteres)");
+			} while (!/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(apellido));
+
+
+			// Segundo apellido	
+
+			var apellido2;
+
+			do {
+				apellido2 = prompt("Introduce tu segundo apellido (solo caracteres)");
+			} while (!/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(apellido2));
+
+
+			// Edad
+
+			var edad;
+
+			do {
+				edad = prompt("¿Cuántos años tienes? (solo números)");
+			} while (!/^\d{1,2}$/.test(edad));
+
+
+
+			// Procesamos la edad a número
+
+			edad = parseInt(edad);
+
+
+
+			// Resultado
+
+			if (edad === 1) {
+				alert("Hola " + nombre + " " + apellido + " " + apellido2 + ", tienes " + edad + " año y eres un bebé 🍼")
+			} else if (edad === 0) {
+				alert("Hola " + nombre + " " + apellido + " " + apellido2 + ", " + " no tienes ni un año aún 🍼")
+			} else if (edad > 18) {
+				alert("Hola " + nombre + " " + apellido + " " + apellido2 + ", tienes " + edad + " años y eres mayor de edad 😎")
+			} else {
+				alert("Hola " + nombre + " " + apellido + " " + apellido2 + ", tienes " + edad + " años y eres menor de edad 🧐")
+			}
+
+		
+	</script>
+
+	
+</head>
+<body>
+
+	
+</body>
+
+</html>

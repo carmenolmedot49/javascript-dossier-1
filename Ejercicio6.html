@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<script>
+
+	// Solicita un número 1-50 y muestra suma, media y cantidad de pares e impares de 1 hasta ese número
+
+
+		// Solicitud del número
+
+		let numero;
+
+		do {
+    		numero = parseInt(prompt("Introduce un número del 1 al 50"));
+		} while (isNaN(numero) || numero < 1 || numero > 50);
+
+
+			// SUMA 
+
+				// Declaración de la variable, el valor inicial es 0 porque no hemos declarado nada aún
+
+				let suma = 0;
+
+				// Bucle que recorre todos los números desde el 1 al que hemos solicitado
+
+				for (let i = 1; i <= numero; i++) {
+					suma += i; // se van sumando todos los números
+				}
+
+				// Resultado
+
+				alert ("La suma de todos los números del 1 al " + numero + " es " + suma + "🔢");
+
+
+
+			// MEDIA
+
+				// Declaración
+
+				let media = suma / numero;
+
+				// Resultado
+
+				alert("La media entre el número introducido y la suma de todos sus números es de " + media +"🔢");
+
+
+
+			// CANTIDAD DE PARES E IMPARES
+
+				// Declaración 
+
+				let pares = 0;
+				let impares = 0;
+
+
+				// Bucle que recorre todos los números
+
+				for (let i = 1; i <= numero; i++) {
+					if (i % 2 === 0) {
+						pares++;
+					} else {
+						impares++;
+					}
+				}
+
+
+				// Resultado
+
+				alert("Hay un total de números pares de: " + pares + " y de impares: " + impares + "🔢");
+		
+
+	</script>
+	
+</head>
+<body>
+	
+</body>
+</html>

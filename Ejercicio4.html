@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+
+	<script>
+	
+	// Muestra la fecha y la hora actual en formato dd/MM/YYYY y hh:mm:ss.
+
+		// FECHA 
+
+			// Objeto fecha 
+
+			const date = new Date(); 
+
+			// Día
+
+			const day = String(date.getDate()).padStart(2, "0"); // padStart (2, "0") para que dé dos cifras
+			
+
+			// Mes
+
+			const month = String(date.getMonth() + 1).padStart(2, "0");
+
+			// Año
+
+			const year = date.getFullYear();
+
+
+			// Resultado de la fecha completa
+
+			const fullDate = `${day}/${month}/${year}`;
+			alert("📅Fecha: " + fullDate);
+
+
+
+
+
+		// HORA
+
+			// Horas
+
+			const hours = String(date.getHours()).padStart(2, "0");
+
+
+			// Minutos
+
+			const minutes = String(date.getMinutes()).padStart(2, "0");
+
+
+			// Segundos
+
+			const seconds = String(date.getSeconds()).padStart(2, "0");
+
+
+			// Resultado horas
+
+			const fullHour = `${hours}:${minutes}:${seconds}`;
+			alert("⏰Hora: " + fullHour);
+
+
+	</script>
+	
+</head>
+<body>
+	
+</body>
+</html>
