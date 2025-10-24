@@ -57,12 +57,14 @@
 
 		let dni = prompt("Introduce tu DNI (recuerda que son 8 dígitos y 1 letra)");
 
-		if (validarDNI(dni)) {
+		if (!/^\d{8}[A-Za-z]$/.test(dni)) {
+			alert("Formato inválido, prueba de nuevo 😢")
+		} else if (validarDNI(dni)) {
 			alert("✅ El DNI es correcto, ¡gracias!")
 		} else {
 			alert ("❌ DNI inválido, no puedes continuar")
 		}
-
+		
 
 	</script>
 	
@@ -70,4 +72,5 @@
 <body>
 	
 </body>
+
 </html>
